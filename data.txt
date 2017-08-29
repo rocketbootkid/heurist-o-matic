@@ -1,0 +1,53 @@
+Subsection,Section,Heuristic,Author,Comments,Link
+Components|Structure|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Connections|Structure|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Complexity|Structure|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Business|Functions|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+System|Functions|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Input / Follow Through / Output|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Aggregation / Transformations|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Onscreen data object tracking|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+RAM data object tracking|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+File data object tracking|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Database data object tracking|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Physical output data object tracking|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Affected systems|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Formatting & Sorting Properties|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Containers & Boundaries Properties|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Presentation & Precision Properties|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Temporary & Utilitarian Properties|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Presets & Hard-Coded Properties|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Volume|Data|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Volume|Data|Four V's of Big Data|
+Variety|Data|Four V's of Big Data|
+Velocity|Data|Four V's of Big Data|
+Veracity|Data|Four V's of Big Data|
+UI|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+API|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Webservice|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Files|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Database|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Physical|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Printouts|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Wireless|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Wearable|Interfaces|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+System Performance|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Functional Performance|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Operational Performance|Time|SFDiPOT|James Bach|http://www.satisfice.com/tools/htsm.pdf
+Learning Curve|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+System State|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+System Data|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Frequency|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Concurrency|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Schedule|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Conditions & Triggers|Time|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Enclosing Systems|Platform|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Surrounding Systems|Platform|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Underlying Systems|Platform|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Environment|Platform|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Procedures|Operations|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Interactions|Operations|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Patterns|Operations|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Personas|Operations|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+Pre/Post/Through Conditions|Operations|SFDiPOT|James Bach||http://www.satisfice.com/tools/htsm.pdf
+
