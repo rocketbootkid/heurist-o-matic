@@ -38,24 +38,8 @@ var horizonSmootheningFactor = 4; // Amount by which nearer horizons become smoo
 var horizonNeareningFactor = 1; // Amount by which nearer horizons get lower
 
 drawSky();
-
-for (h = 0; h < horizonCount; h++) {
-	//console.log("Horizon " + h + " Start Y: " + horizonStartY);
-	drawHorizon();
-	
-	// Set / reset parameters for next horizon
-	horizonStartY = staticHorizonStartY + (h * horizonDeltaY) + (Math.ceil(Math.random()*2*horizonDeltaY)) - horizonDeltaY; // Make next horizon lower down
-	horizonStartX = 0; // Start back at left hand end
-	segmentLength = segmentLength + horizonSmootheningFactor; // Make closer horizons smoother
-	horizonDeltaY = horizonDeltaY + horizonNeareningFactor;
-
-}
-
-drawItAll("External Platform Software", "Software components and configurations that are not a part of the shipping product, but are required (or optional) in order for the product to work: operating systems, concurrently executing applications, drivers, fonts, etc.", "SFDiPOT","James Bach","http://www.satisfice.com/tools/htsm.pdf");
-
-//drawTitle("External Platform Software");
-//drawDescription("Software components and configurations that are not a part of the shipping product, but are required (or optional) in order for the product to work: operating systems, concurrently executing applications, drivers, fonts, etc.");
-//drawStrapline("SFDiPOT","James Bach","http://www.satisfice.com/tools/htsm.pdf");
+drawHills();
+getHeuristic();
 
 // ******************************************************************************
 //                              FUNCTIONS
@@ -70,6 +54,22 @@ function drawSky() {
 	sky.addColorStop(1, "orange");
 	context.fillStyle = sky;
 	context.fillRect(0, 0, canvasDimensions.width, canvasDimensions.height*2/3);
+	
+}
+
+function drawHills() {
+	
+	for (h = 0; h < horizonCount; h++) {
+		
+		drawHorizon();
+		
+		// Set / reset parameters for next horizon
+		horizonStartY = staticHorizonStartY + (h * horizonDeltaY) + (Math.ceil(Math.random()*2*horizonDeltaY)) - horizonDeltaY; // Make next horizon lower down
+		horizonStartX = 0; // Start back at left hand end
+		segmentLength = segmentLength + horizonSmootheningFactor; // Make closer horizons smoother
+		horizonDeltaY = horizonDeltaY + horizonNeareningFactor;
+
+	}	
 	
 }
 
@@ -103,13 +103,56 @@ function generateSegmentColor(horizonCount) {
 	// Generates a slowly darkening gray color hex string
 
 	var value = 14 - horizonCount;
-   
     color = "#" + value.toString(16) + value.toString(16) + value.toString(16);
-
-    console.log("Segment Color: " + color);
-
     return color;
     
+}
+
+function getHeuristic() {
+	
+	allHeuristics = document.getElementById("content").innerHTML;
+	arrLines = allHeuristics.split("\n");
+	countLines = arrLines.length;
+	countLines = countLines - 1;
+	console.log("Total Lines: " + countLines);
+	
+	var title = "";
+	var description = "";
+	var mnemonic = "";
+	var author = "";
+	var url = "";
+	
+	while (title == "" || description == "" || mnemonic == "" || author == "" || url == "") {
+		
+		randomLine = Math.ceil(Math.random()*countLines);
+		console.log("Selected Line Number: " + randomLine);
+
+		selectedLine = arrLines[randomLine];
+		console.log("Selected Line Text: " + selectedLine);
+		
+		selectedLineParts = selectedLine.split("\t");
+		
+		title = selectedLineParts[0];
+		console.log("Title: " + title);
+		
+		description = selectedLineParts[1];
+		if (description && description != "" && description.substring(0, 1) == "\"") {
+			description = description.substring(1, (description.length) - 1);
+		}
+		console.log("Description: " + description);
+		
+		mnemonic = selectedLineParts[2];
+		console.log("Mnemonic: " + mnemonic);
+		
+		author = selectedLineParts[3];
+		console.log("Author: " + author);
+		
+		url = selectedLineParts[4];
+		console.log("URL: " + url);
+	}
+	
+	drawItAll(title, description, mnemonic, author, url);
+	
 }
 
 function drawItAll(titleText,descriptionText,mnemonic,author,url) {
@@ -122,40 +165,5 @@ function drawItAll(titleText,descriptionText,mnemonic,author,url) {
 	layerStyle.top = "20%";
 	
 	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
-	
-}
-
-function drawTitle(titleText) {
-
-	document.getElementById("title").style.position = "absolute";
-	document.getElementById("title").style.left = "25%";
-	document.getElementById("title").style.width = "50%";
-	document.getElementById("title").style.top = "20%";
-	
-	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font>";
-
-}
-
-function drawDescription(descriptionText) {
-	
-	document.getElementById("description").style.position = "absolute";
-	document.getElementById("description").style.left = "25%";
-	document.getElementById("description").style.width = "50%";
-	document.getElementById("description").style.top = "27%";
-	
-	document.getElementById('description').innerHTML = "<font face='Georgia' size='5' color=#555>" + descriptionText + "</font>";
-	
-}
-
-function drawStrapline(mnemonic,author,url) {
-	
-	document.getElementById("footer").style.position = "absolute";
-	document.getElementById("footer").style.left = "25%";
-	document.getElementById("footer").style.width = "50%";
-	document.getElementById("footer").style.top = "50%";
-	document.getElementById("footer").style.textAlign = "right";
-	
-	document.getElementById('footer').innerHTML = "<font face='Georgia' size='5' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font>";	
-	
 	
 }
