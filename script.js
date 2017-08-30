@@ -16,8 +16,8 @@ var canvas = document.getElementById('myCanvas');
 var context = canvas.getContext('2d');
 
 // Make canvas size of window
-context.canvas.width = window.innerWidth;
-context.canvas.height = window.innerHeight;
+context.canvas.width = window.innerWidth - 20;
+context.canvas.height = window.innerHeight - 20;
 
 var canvasDimensions = {
 		width: window.innerWidth,
@@ -40,6 +40,7 @@ var horizonNeareningFactor = 1; // Amount by which nearer horizons get lower
 drawSky();
 drawHills();
 getHeuristic();
+drawBraces();
 
 // ******************************************************************************
 //                              FUNCTIONS
@@ -134,6 +135,7 @@ function getHeuristic() {
 		
 		title = selectedLineParts[0];
 		console.log("Title: " + title);
+		title = "<strong>" + title.substring(0,1) + "</strong>" + title.substring(1,title.length);
 		
 		description = selectedLineParts[1];
 		if (description && description != "" && description.substring(0, 1) == "\"") {
@@ -160,10 +162,39 @@ function drawItAll(titleText,descriptionText,mnemonic,author,url) {
 	layerStyle = document.getElementById("title").style;
 	
 	layerStyle.position = "absolute";
-	layerStyle.left = "25%";
-	layerStyle.width = "50%";
-	layerStyle.top = "20%";
+	leftCoord = Math.ceil(0.25 * window.innerWidth);
+	layerStyle.left = leftCoord + "px";
+	widthCoord = Math.ceil(0.5 * window.innerWidth);
+	layerStyle.width = widthCoord + "px";
+	topCoord = Math.ceil(0.20 * window.innerHeight);
+	layerStyle.top = topCoord + "px";
+	
 	
 	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
+	
+}
+
+function drawBraces() {
+	
+	size = document.getElementById("title").clientHeight;
+	top_left_x = Math.ceil(0.25 * window.innerWidth);
+	top_left_y = Math.ceil(0.20 * window.innerHeight);
+	top_right_x = Math.ceil(0.75 * window.innerWidth);
+	console.log("Top corner: " + top_left_x + "," + top_left_y);
+	//console.log("Canvas Dimensions: " + canvasDimensions.width + "," + canvasDimensions.height);
+	//console.log("Top corner minus %: " + (top_x.substring(0, 2)/100) + "," + (top_y.substring(0, 2)/100));
+	//top_x = (top_x.substring(0, 2)/100)*canvasDimensions.width;
+	//top_y = (top_y.substring(0, 2)/100)*canvasDimensions.height;
+	//console.log("Top corner: " + top_x + "," + top_y);
+	
+	context.beginPath();
+	context.fillStyle = "#444";
+	context.font = size + "px Georgia";
+	context.fillText("{", top_left_x - 80, top_left_y + (0.8*size), 50);
+	
+	context.beginPath();
+	context.fillStyle = "#444";
+	context.font = size + "px Georgia";
+	context.fillText("}", top_right_x + 30, top_left_y + (0.8*size), 50);
 	
 }

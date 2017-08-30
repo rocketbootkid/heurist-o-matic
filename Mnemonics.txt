@@ -45,3 +45,54 @@ Vulnerability	"Is the data vulnerable at rest, in flight or during processing?"	
 Volatility	"How old does your data need to be before it is considered irrelevant, historic, or not useful any longer? How long does data need to be kept for?"	Ten V's of Big Data	Various	https://upside.tdwi.org/articles/2017/02/08/10-vs-of-big-data.aspx
 Visualisation	How challenging is the data to visualize?	Ten V's of Big Data	Various	https://upside.tdwi.org/articles/2017/02/08/10-vs-of-big-data.aspx
 Value	How easy is it to derive value from the data?	Ten V's of Big Data	Various	https://upside.tdwi.org/articles/2017/02/08/10-vs-of-big-data.aspx
+Customers	"Who are the customers of the product? Not only those who use the software but also the people who are their customers, and the people who actually buy it."	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Information	"What are the sources of information about the product and the domain in which it will operate? Do testers already have background information; knowledge and inferences and implied specifications from which to derive test ideas? Do we have access to project planning documents, and if so, in what kind of shape are they? Who on the project could provide us with useful information?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Developer Relations	Who is responsible for the code? Where are they; in one location or all over the place? How do they get along with the rest of the project community? With each other?	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Test Team	"With whom are we working? Do we know yet? Is there a diversity of skills in place? Is someone going to have to do special research or training, or will we need to recruit outside help?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Equipment & Tools	"Is there a test lab set up, or do we have to make do with our own computers? Are there separate development, testing, and production environments available? Does our testing require peripherals or special hardware of some kind? Are our favorite testing tools available now, or are we going to have to collect and install them?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Schedule	"When can we expect code to test and documentation to read? What hard deadlines or milestones are in place? What is the rate of change on the project? How much time do we have for test planning, preparation, and execution? What do we have to do right now?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Test Items	"What is the product that we're testing? Do we have access to it? Is it relatively stable, or is it changing a lot? Will changes require new tests, or will we focus on retesting? What hooks or features exist that might make the product easier to test? And what is the future direction of the product?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Deliverables	"What do our clients want to see from the test process? How are we going to record and report progress? How formalized is the reporting process, and to whom do we report? Are there standards that we could - or must - follow?"	CIDTESTD	James Bach	http://www.developsense.com/articles/2005-09-StayingOnTheCriticalPath.pdf
+Domain	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+User	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Function	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Flow	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Stress	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Scenario	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Claims	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Risk	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Automatic	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	DUFFSSCRA	James Bach	
+Capability	Can it perform the required functions?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Reliability	Will it work well and resist failure in all required situations?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Usability	How easy is it for a real user to use the product?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Security	How secure is it when it is deployed in the real world?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Scalability	How easily can it be scaled up / out to large numbers of users?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Performance	How speedy and responsive is it?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Installability	How easily can it be installed onto its target platform?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Compatability	How well does it work with external components & configurations?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Supportability	How economical will it be to provide support to users of the product?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Testability	How effectively can the product be tested?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Maintainability	"How economical will it be to build, fix or enhance the product?"	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Portability	How economical will it be to port or reuse the technology elsewhere?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+Localizability	How economical will it be to publish the product in another language?	CRUSSPIC STMPL	James Bach	http://www.satisfice.com/articles/hrbt.pdf
+History	We expect the present version of the system to be consistent with past versions of it.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Familiarity	We expect the system to be inconsistent with patterns of familiar problems.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Explainability	We expect a system to be understandable to the degree that we can articulately explain its behaviour to ourselves and others.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+World	We expect the product to be consistent with things that we know about or can observe in the world.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Image	"We expect the system to be consistent with an image that the organization wants to project, with its brand, or with its reputation."	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Comparable Products	"We expect the system to be consistent with systems that are in some way comparable. This includes other products in the same product line; competitive products, services, or systems; or products that are not in the same category but which process the same data; or alternative processes or algorithms."	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Claims	"We expect the system to be consistent with things important people say about it, whether in writing (references specifications, design documents, manuals, whiteboard sketches) or in conversation (meetings, public announcements, lunchroom conversations)."	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Users' Desires	We believe that the system should be consistent with ideas about what reasonable users might want.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Product	We expect each element of the system (or product) to be consistent with comparable elements in the same system.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Purpose	We expect the system to be consistent with the explicit and implicit uses to which people might put it.	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Statutes & Standards	"We expect a system to be consistent with relevant statutes, acts, laws, regulations, or standards."	FEW HICCUPPS	James Bach / Michael Bolton	http://www.developsense.com/blog/2012/07/few-hiccupps/
+Scouting Obsessively	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Authentic Problems	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Cognitive Savvy	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Knowledge Attracts Knowledge	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Experimentation	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Disposable Time	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Stories	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Other Minds	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Words & Pictures	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
+Systems Thinking	"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"	SACKED COWS	James Bach	
