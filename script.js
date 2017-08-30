@@ -51,8 +51,11 @@ for (h = 0; h < horizonCount; h++) {
 
 }
 
-drawTitle("External Platform Software");
-drawDescription("Software components and configurations that are not a part of the shipping product, but are required (or optional) in order for the product to work: operating systems, concurrently executing applications, drivers, fonts, etc.");
+drawItAll("External Platform Software", "Software components and configurations that are not a part of the shipping product, but are required (or optional) in order for the product to work: operating systems, concurrently executing applications, drivers, fonts, etc.", "SFDiPOT","James Bach","http://www.satisfice.com/tools/htsm.pdf");
+
+//drawTitle("External Platform Software");
+//drawDescription("Software components and configurations that are not a part of the shipping product, but are required (or optional) in order for the product to work: operating systems, concurrently executing applications, drivers, fonts, etc.");
+//drawStrapline("SFDiPOT","James Bach","http://www.satisfice.com/tools/htsm.pdf");
 
 // ******************************************************************************
 //                              FUNCTIONS
@@ -109,6 +112,18 @@ function generateSegmentColor(horizonCount) {
     
 }
 
+function drawItAll(titleText,descriptionText,mnemonic,author,url) {
+	
+	layerStyle = document.getElementById("title").style;
+	
+	layerStyle.position = "absolute";
+	layerStyle.left = "25%";
+	layerStyle.width = "50%";
+	layerStyle.top = "20%";
+	
+	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
+	
+}
 
 function drawTitle(titleText) {
 
@@ -132,14 +147,15 @@ function drawDescription(descriptionText) {
 	
 }
 
-function drawStrap() {
+function drawStrapline(mnemonic,author,url) {
 	
 	document.getElementById("footer").style.position = "absolute";
 	document.getElementById("footer").style.left = "25%";
 	document.getElementById("footer").style.width = "50%";
-	document.getElementById("footer").style.top = "35%";
+	document.getElementById("footer").style.top = "50%";
+	document.getElementById("footer").style.textAlign = "right";
 	
-	document.getElementById('footer').innerHTML = "<font face='Georgia' size='5' color=#555>Footer</font>";	
+	document.getElementById('footer').innerHTML = "<font face='Georgia' size='5' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font>";	
 	
 	
 }
