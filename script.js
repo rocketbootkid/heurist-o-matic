@@ -41,6 +41,8 @@ drawSky();
 drawHills();
 getHeuristic();
 drawBraces();
+drawFooterText();
+drawNextArrow();
 
 // ******************************************************************************
 //                              FUNCTIONS
@@ -122,8 +124,9 @@ function getHeuristic() {
 	var mnemonic = "";
 	var author = "";
 	var url = "";
+	var category = "";
 	
-	while (title == "" || description == "" || mnemonic == "" || author == "" || url == "") {
+	while (title == "" || description == "" || mnemonic == "" || author == "" || url == "" || category == "") {
 		
 		randomLine = Math.ceil(Math.random()*countLines);
 		console.log("Selected Line Number: " + randomLine);
@@ -151,13 +154,16 @@ function getHeuristic() {
 		
 		url = selectedLineParts[4];
 		console.log("URL: " + url);
+		
+		category = selectedLineParts[5];
+		console.log("Category: " + category);
 	}
 	
-	drawItAll(title, description, mnemonic, author, url);
+	drawItAll(title, description, mnemonic, author, url, category);
 	
 }
 
-function drawItAll(titleText,descriptionText,mnemonic,author,url) {
+function drawItAll(titleText,descriptionText,mnemonic,author,url,category) {
 	
 	layerStyle = document.getElementById("title").style;
 	
@@ -170,7 +176,7 @@ function drawItAll(titleText,descriptionText,mnemonic,author,url) {
 	layerStyle.top = topCoord + "px";
 	
 	
-	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#555><a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
+	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#333>" + category + " | <a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
 	
 }
 
@@ -180,21 +186,67 @@ function drawBraces() {
 	top_left_x = Math.ceil(0.25 * window.innerWidth);
 	top_left_y = Math.ceil(0.20 * window.innerHeight);
 	top_right_x = Math.ceil(0.75 * window.innerWidth);
-	console.log("Top corner: " + top_left_x + "," + top_left_y);
-	//console.log("Canvas Dimensions: " + canvasDimensions.width + "," + canvasDimensions.height);
-	//console.log("Top corner minus %: " + (top_x.substring(0, 2)/100) + "," + (top_y.substring(0, 2)/100));
-	//top_x = (top_x.substring(0, 2)/100)*canvasDimensions.width;
-	//top_y = (top_y.substring(0, 2)/100)*canvasDimensions.height;
-	//console.log("Top corner: " + top_x + "," + top_y);
-	
+
+	// Left Brace
 	context.beginPath();
 	context.fillStyle = "#444";
 	context.font = size + "px Georgia";
-	context.fillText("{", top_left_x - 80, top_left_y + (0.8*size), 50);
+	context.fillText("{", top_left_x - 80, top_left_y + (0.77*size), 50);
 	
+	// Right Brace
 	context.beginPath();
 	context.fillStyle = "#444";
 	context.font = size + "px Georgia";
-	context.fillText("}", top_right_x + 30, top_left_y + (0.8*size), 50);
+	context.fillText("}", top_right_x + 30, top_left_y + (0.77*size), 50);
+	
+}
+
+function drawFooterText() {
+	
+	mnemonicCount = countMnemonics();
+	
+	context.beginPath();
+	context.fillStyle = "white";
+	context.font = "16px Georgia";
+	context.fillText("Displaying " + mnemonicCount[0] + " heuristics from " + mnemonicCount[1] + " mnemonics. 'Heurist-o-matic' created by RocketBootKid. All rights and kudos to the mnemonics' original authors.", canvasDimensions.mid_x - 400, canvasDimensions.height - 50, 800);
+	
+}
+
+function drawNextArrow() {
+	
+	nextLayer = document.getElementById("next").style;
+	
+	nextLayer.position = "absolute";
+	leftCoord = Math.ceil(0.75 * window.innerWidth) + 100;
+	nextLayer.left = leftCoord + "px";
+	topCoord = Math.ceil(0.20 * window.innerHeight) + (document.getElementById("title").clientHeight)/2 - 28;
+	nextLayer.top = topCoord + "px";
+	nextLayer.height = "50px";
+	
+	document.getElementById("next").innerHTML = "<a href='' alt='Random Heuristic' title='Random Heuristic'><font face='Georgia' size='7' color='#333'><strong>></strong></font></a>";
+}
+
+function countMnemonics() {
+	
+	allHeuristics = document.getElementById("content").innerHTML;
+	arrLines = allHeuristics.split("\n");
+	countLines = arrLines.length;
+	
+	currentMnemonic = "";
+	mnemonicCount = 0;
+	
+	for (l = 0; l < countLines; l++) {
+		
+		lineText = arrLines[l];
+		selectedLineParts = lineText.split("\t");
+		mnemonic = selectedLineParts[2];
+		
+		if (mnemonic != currentMnemonic) {
+			currentMnemonic = mnemonic;
+			mnemonicCount++;
+		}
+	}
+	
+	return [countLines, mnemonicCount];
 	
 }
