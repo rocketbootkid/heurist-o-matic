@@ -26,6 +26,7 @@ var canvasDimensions = {
 		height: window.innerHeight
 	};
 
+	
 var segmentLength = 18; // How long each segment of a horison is
 var segmentCount = Math.ceil(canvasDimensions.width/segmentLength); // Determine how many segments fit on screen
 var horizonCount = 12;
@@ -111,10 +112,11 @@ function generateSegmentColor(horizonCount) {
     
 }
 
-function getHeuristic() {
+function getHeuristic(data) {
 	
-	allHeuristics = document.getElementById("content").innerHTML;
-	arrLines = allHeuristics.split("\n");
+	var data = document.getElementById("content").innerHTML;
+	
+	var arrLines = data.split("|||");
 	countLines = arrLines.length;
 	countLines = countLines - 1;
 	console.log("Total Lines: " + countLines);
@@ -134,10 +136,11 @@ function getHeuristic() {
 		selectedLine = arrLines[randomLine];
 		console.log("Selected Line Text: " + selectedLine);
 		
-		selectedLineParts = selectedLine.split("\t");
+		selectedLineParts = selectedLine.split("|");
 		
 		title = selectedLineParts[0];
 		console.log("Title: " + title);
+		title = title.trim();
 		title = "<strong>" + title.substring(0,1) + "</strong>" + title.substring(1,title.length);
 		
 		description = selectedLineParts[1];
@@ -161,6 +164,7 @@ function getHeuristic() {
 	
 	drawItAll(title, description, mnemonic, author, url, category);
 	
+
 }
 
 function drawItAll(titleText,descriptionText,mnemonic,author,url,category) {
@@ -176,7 +180,7 @@ function drawItAll(titleText,descriptionText,mnemonic,author,url,category) {
 	layerStyle.top = topCoord + "px";
 	
 	
-	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#333>" + category + " | <a href=" + url + " target='_blank'>" + mnemonic + "</a> | " + author + "</font></div>";	
+	document.getElementById('title').innerHTML = "<font face='Georgia' size='7' color=#333>" + titleText + "</font><p><font face='Georgia' size='5' color=#555>" + descriptionText + "</font><p><div align=right width=100%><font face='Georgia' size='4' color=#333>" + category + " | <a href=" + url + " target='_blank' title='Open source article'>" + mnemonic + "</a> | " + author + "</font></div>";	
 	
 }
 
@@ -223,13 +227,13 @@ function drawNextArrow() {
 	nextLayer.top = topCoord + "px";
 	nextLayer.height = "50px";
 	
-	document.getElementById("next").innerHTML = "<a href='' alt='Random Heuristic' title='Random Heuristic'><font face='Georgia' size='7' color='#333'><strong>></strong></font></a>";
+	document.getElementById("next").innerHTML = "<a href='' alt='Show me another random Heuristic' title='Show me another random Heuristic'><font face='Georgia' size='7' color='#333'><strong>></strong></font></a>";
 }
 
 function countMnemonics() {
 	
 	allHeuristics = document.getElementById("content").innerHTML;
-	arrLines = allHeuristics.split("\n");
+	arrLines = allHeuristics.split("|||");
 	countLines = arrLines.length;
 	
 	currentMnemonic = "";
@@ -238,7 +242,7 @@ function countMnemonics() {
 	for (l = 0; l < countLines; l++) {
 		
 		lineText = arrLines[l];
-		selectedLineParts = lineText.split("\t");
+		selectedLineParts = lineText.split("|");
 		mnemonic = selectedLineParts[2];
 		
 		if (mnemonic != currentMnemonic) {
@@ -250,3 +254,4 @@ function countMnemonics() {
 	return [countLines, mnemonicCount];
 	
 }
+
