@@ -6,18 +6,22 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>Heurist-o-matic | Random Software Testing Heuristics</title>
+        <title>Heurist-o-matic | Mnemonic</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<style>
-			div#content { display:none; }
+			a:link {color:black; }
+			a:visited {color:black; }
+			a:active {color:black; }
 			a { text-decoration:none; }
+			a:hover { text-decoration:underline; }
+			div#content { display:none; }
 		</style>
     </head>
     <body>
 		<div id="title"></div>
+		<div id="output"></div>
 		<div id="next"></div>
-		<div id="all"></div>
 		<div id="content">
 			Code Structure|"The code structures that comprise the product, from executables to individual routines."|SFDPOT|James Bach|http://www.satisfice.com/tools/htsm.pdf|Test Strategy |||
 			Hardware Structure|Any hardware component that is integral to the product.|SFDPOT|James Bach|http://www.satisfice.com/tools/htsm.pdf|Test Strategy |||
@@ -117,12 +121,12 @@ and open the template in the editor.
 			Other Minds|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|SACKED COWS|James Bach||Learning Heuristic |||
 			Words & Pictures|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|SACKED COWS|James Bach||Learning Heuristic |||
 			Systems Thinking|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|SACKED COWS|James Bach||Learning Heuristic |||
-			Past|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
-			Results|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
-			Obstacles|"What blockers or barriers did you encounter during the session? Did you overcome them, and how?"|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
-			Outlook|"What's your outlook on the functionality you tested? Does it ""feel"" ready? Does it need further development?"|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
-			Feelings|What feelings did you have during the session? How did they inform your testing?|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
-			Learnings & Adaptation|What personal data did you gather during the session? What did you learn? How did your testing change as a result?|PROOFLA|"Jon Bach, Henrik Andersen"||Session Based Test Reporting |||
+			Past|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
+			Results|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
+			Obstacles|"What blockers or barriers did you encounter during the session? Did you overcome them, and how?"|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
+			Outlook|"What's your outlook on the functionality you tested? Does it "feel" ready? Does it need further development?"|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
+			Feelings|What feelings did you have during the session? How did they inform your testing?|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
+			Learnings & Adaptation|What personal data did you gather during the session? What did you learn? How did your testing change as a result?|PROOFLA|Jon Bach, Henrik Andersen||Session Based Test Reporting |||
 			Modelling|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|MR.Q COMP GRABC R&R|Jon Bach||Exploration Skill / Tactic |||
 			Resourcing|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|MR.Q COMP GRABC R&R|Jon Bach||Exploration Skill / Tactic |||
 			Questioning|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|MR.Q COMP GRABC R&R|Jon Bach||Exploration Skill / Tactic |||
@@ -139,8 +143,8 @@ and open the template in the editor.
 			Reporting|"Err, I couldn't find the original description for this Heuristic. You haven't seen it around, have you?"|MR.Q COMP GRABC R&R|Jon Bach||Exploration Skill / Tactic |||
 			Replicate It|Ideally the consumer of the bug report should be able to re-create the bug from the information contained in the report. |RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
 			Isolate It|Bug reports are more powerful and are generally taken more seriously when the steps to re-create the bug are simple. By isolating the actual bug -- separating it from any incidental or unrelated steps you took the first time you observed it -- frequently enables you to document the most direct (or at least a very direct) path to replicate the bug.|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
-			Maximise It|"We can't test everything, so we sample. When we observe a bug with our sampling, odds are that we didn't randomly stumble upon the most severe incarnation of the bug using whatever sampling method we employed. Try to recreate the bug by varying your test along various axes (data, configuration, navigation path, among others). Focus your report on the ""worst"" version of the failure you manage to create."|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
-			Generalize It|"Generalizing is the answer to ""No user we like would ever do that on purpose."" Demonstrating that a bug will be encountered by normal users performing normal activities will get more attention than demonstrating that an obscure bug may be encountered following an improbable path to accomplish a minimally important system function."|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
+			Maximise It|"We can't test everything, so we sample. When we observe a bug with our sampling, odds are that we didn't randomly stumble upon the most severe incarnation of the bug using whatever sampling method we employed. Try to recreate the bug by varying your test along various axes (data, configuration, navigation path, among others). Focus your report on the "worst" version of the failure you manage to create."|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
+			Generalize It|"Generalizing is the answer to "No user we like would ever do that on purpose." Demonstrating that a bug will be encountered by normal users performing normal activities will get more attention than demonstrating that an obscure bug may be encountered following an improbable path to accomplish a minimally important system function."|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
 			Externalize It|"Nobody cares if a bug annoys a tester. People care if a bug will annoy someone who pays to use the software, or writes reviews about the software, or who is likely to pay you for the work you did to develop the software in the first place. Focusing your bug reporting on the impact to people who matter makes your bug report more potent."|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
 			And Bland-ize It|"Say It Clearly and Dispassionately. Bug reports aren't personal. Neither are bugs. We are reporters, not accusers. "|RIMGEA|Cem Kaner|http://searchsoftwarequality.techtarget.com/tip/Software-testing-is-improved-by-good-bug-reporting|Bug Advocacy |||
 			Feature Tour|Move through the application and get familiar with all the controls and features you come across.|FCC CUTS VIDS|Michael D Kelly|http://michaeldkelly.com/blog/2005/9/20/touring-heuristic.html|Touring |||
@@ -169,11 +173,11 @@ and open the template in the editor.
 			UI|Are users given some indication that what they attempted to do failed? Are user interface messages worded for the intended audience? Are user interface error messages consistent with the look and feel of the software? Are error messages consistent with other activity that causes the same error elsewhere in the application? Are errors communicated in an efficient manner? Does a user need to click away excessive dialogs? Is this error best communicated as an error dialog? Is this error best communicated as text added to the window? Is this error best communicated audibly?|FAILURE|Ben Simo|http://www.questioningsoftware.com/2007/08/failure-usability.html|Error Handling |||
 			Recovery|"Does the error message tell the user how to recover from the error condition? Does the software facilitate recovery? If needed, is contact information provided? Is the user prompted through the recovery or left to figure it out on their own?"|FAILURE|Ben Simo|http://www.questioningsoftware.com/2007/08/failure-usability.html|Error Handling |||
 			Emotions|"What emotions are likely to be raised by the error message? Does the information in the message add to a user's frustration or help quiet it? If a user is being told that they need to pay more to use a feature, does the message encourage them to upgrade or does it encourage them to find a competitor's product? Does the error message cause more confusion?"|FAILURE|Ben Simo|http://www.questioningsoftware.com/2007/08/failure-usability.html|Error Handling |||
-			1. Security|"If there is a security problem, too it is often not an easy fix but means redesigning an entire section of code to be secure."|SLiME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
-			2. Languages|"If there is a language problem, too it is often not an easy fix but means redesigning an entire section of code to support other languages that english (i18n, l10)"|SLiME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
-			3. RequIrements|"Test requirements, both implicit and explicit."|SLiME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
-			4. Measurement|"Then move onto the types of tests that measure things, be it performance, stress or load testing."|SLiME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
-			5. Existing|Look at existing functionality (regression test) as there should be no more changes to the underlying design of the code.|SLiME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
+			1. Security|"If there is a security problem, too it is often not an easy fix but means redesigning an entire section of code to be secure."|SLIME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
+			2. Languages|"If there is a language problem, too it is often not an easy fix but means redesigning an entire section of code to support other languages that english (i18n, l10)"|SLIME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
+			3. requIrements|"Test requirements, both implicit and explicit."|SLIME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
+			4. Measurement|"Then move onto the types of tests that measure things, be it performance, stress or load testing."|SLIME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
+			5. Existing|Look at existing functionality (regression test) as there should be no more changes to the underlying design of the code.|SLIME|Adam Goucher|http://adam.goucher.ca/?p=130|Order of Testing Tasks |||
 			Frequent|Common application usage.|FIBLOTS|Scott Barber|http://scott-barber.blogspot.co.uk/2011/09/model-workloads-for-performance-testing.html|Model Workloads for Performance Testing |||
 			Intensive|Resource hogging activities.|FIBLOTS|Scott Barber|http://scott-barber.blogspot.co.uk/2011/09/model-workloads-for-performance-testing.html|Model Workloads for Performance Testing |||
 			Business Critical|Even if these activities are both rare and not risky|FIBLOTS|Scott Barber|http://scott-barber.blogspot.co.uk/2011/09/model-workloads-for-performance-testing.html|Model Workloads for Performance Testing |||
@@ -242,10 +246,10 @@ and open the template in the editor.
 			Assimilate|The Assimilate stage is about allowing what you learn to alter what and how you test. Don’t forget to apply what you have learned. Adapt your expectations, but don’t abandon your values. Add their distinctiveness to our own. Resistance is futile.|AACID|Richard Paterson|http://rcpaterson.co.uk/blog/test/aacid-a-test-mnemonic/|Core Testing Principles |||
 			Communicate|The Communicate stage is about building up your support and information network. Talk to other roles and build up mutually beneficial relationships. If you uncover conflicting information, check your understanding and ask questions. Be constructive and support others.|AACID|Richard Paterson|http://rcpaterson.co.uk/blog/test/aacid-a-test-mnemonic/|Core Testing Principles |||
 			Investigate|The Investigate stage is the exploratory, learning, testing phase where you are examining the product. Go slowly and pay attention. Take pictures. If you feel something, find out why. Look everywhere. Trust your instincts. Keep your mouth shut and your eyes open.|AACID|Richard Paterson|http://rcpaterson.co.uk/blog/test/aacid-a-test-mnemonic/|Core Testing Principles |||
-			Deviate|The Deviate stage is about doing all the things “they” say aren’t important or will never happen. Nothing ever happened until the first time. Mess about and get it “wrong”. Try different stuff, weird stuff. Find the edge and go beyond it. Get distracted and follow your nose.|AACID|Richard Paterson|http://rcpaterson.co.uk/blog/test/aacid-a-test-mnemonic/|Core Testing Principles |||
+			Deviate|The Deviate stage is about doing all the things “they” say aren’t important or will never happen. Nothing ever happened until the first time. Mess about and get it “wrong”. Try different stuff, weird stuff. Find the edge and go beyond it. Get distracted and follow your nose.|AACID|Richard Paterson|http://rcpaterson.co.uk/blog/test/aacid-a-test-mnemonic/|Core Testing Principles		
 		</div>
 		<canvas id="myCanvas" width="2000" height="1000"></canvas>
 		<script src="js/background.js"></script>
-		<script src="script.js"></script>
+		<script src="mnemonic.js"></script>
     </body>
 </html>
